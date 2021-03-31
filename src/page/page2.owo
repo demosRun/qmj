@@ -1,0 +1,53 @@
+<template lang="pug">
+.page2
+  .so.so-0
+    img.so.so-1(src="@|1345.png|")
+    img.so.so-2(src="@|1343.png|" o-animation="bottomToTopHide")
+    img.so.so-3(src="@|1344.png|")
+    img.so.so-4(src="@|1346.png|")
+</template>
+
+<script>
+module.exports = {
+  created: function () {
+    owo.tool.touch({
+      el: this.$el,
+      end: function (e) {
+        if (e.swipe[1] < -100) {
+          owo.go('page3//scaleDown/scaleUpDown/true/scaleDown/scaleUp')
+        }
+      }
+    })
+  }
+}
+</script>
+
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 127px;
+  top: 314px;
+  z-index: -1;
+}
+.so-2 {
+  left: 353px;
+  top: 1076px;
+  z-index: -2;
+}
+.so-3 {
+  left: 306px;
+  top: 955px;
+  z-index: -3;
+}
+.so-4 {
+  left: 125px;
+  top: 397px;
+  z-index: -4;
+}
+</style>

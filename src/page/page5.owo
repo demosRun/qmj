@@ -1,0 +1,31 @@
+<template lang="pug">
+.page5
+  .so.so-0
+    img.so.so-1(src="@|899.png|")
+    img.so.so-2(src="@|897.png|" go="page4//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
+</template>
+
+<script>
+module.exports = {
+}
+</script>
+
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 305px;
+  top: 285px;
+  z-index: -1;
+}
+.so-2 {
+  left: 36px;
+  top: 189px;
+  z-index: -2;
+}
+</style>

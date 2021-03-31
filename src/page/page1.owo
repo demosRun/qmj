@@ -1,0 +1,101 @@
+<template lang="pug">
+.page-1
+  .so.so-0
+    img.so.so-1(src="@|127.png|" o-animation="shrink" go="page2//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
+    img.so.so-2(src="@|122.png|")
+    img.so.so-3(src="@|120.png|")
+    img.so.so-4(src="@|118.png|")
+    img.so.so-5(src="@|116.png|")
+    img.so.so-6(src="@|1342.png|")
+    img.so.so-7(src="@|1340.png|")
+    img.so.so-8(src="@|109.png|")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+
+    }
+  }
+</script>
+
+
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 253px;
+  top: 997px;
+  z-index: -1;
+}
+.so-2 {
+  left: 231px;
+  top: 267px;
+  z-index: -2;
+}
+.so-3 {
+  left: 110px;
+  top: 450px;
+  z-index: -3;
+}
+.so-4 {
+  left: 529px;
+  top: 698px;
+  z-index: -4;
+}
+.so-5 {
+  left: 530px;
+  top: 610px;
+  z-index: -5;
+}
+.so-6 {
+  left: 425px;
+  top: 931px;
+  z-index: -6;
+}
+.so-7 {
+  left: 105px;
+  top: 415px;
+  z-index: -7;
+}
+.so-8 {
+  left: 38px;
+  top: 185px;
+  z-index: -8;
+}
+.so-9 {
+  left: 0px;
+  top: 0px;
+  z-index: -9;
+}
+.so-10 {
+  left: 0px;
+  top: 583px;
+  z-index: -10;
+}
+.so-11 {
+  left: 391px;
+  top: 433px;
+  z-index: -11;
+}
+.so-12 {
+  left: 56px;
+  top: 400px;
+  z-index: -12;
+}
+.so-13 {
+  left: 0px;
+  top: 292px;
+  z-index: -13;
+}
+.so-14 {
+  left: 0px;
+  top: 0px;
+  z-index: -14;
+}
+</style>
