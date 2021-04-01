@@ -2,7 +2,7 @@
 .page6
   .so.so-0
     img.so.so-1(src="@|1120.png|")
-    img.so.so-2(src="@|400.png|")
+    img.so.so-2(src="@|400.png|" go="page5//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
     img.so.so-3(src="@|263.png|" go="page7//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
     img.so.so-4(src="@|255.png|" go="page8//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
 </template>

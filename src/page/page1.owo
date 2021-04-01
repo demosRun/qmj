@@ -6,8 +6,8 @@
     img.so.so-3(src="@|120.png|")
     img.so.so-4(src="@|118.png|")
     img.so.so-5(src="@|116.png|")
-    img.so.so-6(src="@|1342.png|")
-    img.so.so-7(src="@|1340.png|")
+    img.so.so-6(src="@|1342.png|" o-animation="flicker")
+    img.so.so-7(src="@|1340.png|" o-animation="floatLeftRight")
     img.so.so-8(src="@|109.png|")
 </template>
 
@@ -62,6 +62,7 @@
   left: 105px;
   top: 415px;
   z-index: -7;
+  animation-duration: 5s;
 }
 .so-8 {
   left: 38px;
@@ -98,4 +99,5 @@
   top: 0px;
   z-index: -14;
 }
+
 </style>

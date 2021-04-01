@@ -149,6 +149,16 @@
 			"name": "page8",
 			"src": "/src/page/page8.owo",
 			"type": "page"
+		},
+		{
+			"name": "music",
+			"src": "https://template.owo.ink/bc59e31ef893b3fd.owo",
+			"type": "block"
+		},
+		{
+			"name": "share",
+			"src": "https://template.owo.ink/51ca7ab4c38de699.owo",
+			"type": "block"
 		}
 	],
 	"mode": {

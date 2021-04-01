@@ -3,13 +3,19 @@
   .so.so-0
     img.so.so-1(src="@|835.png|" go="page6//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
     img.so.so-2(src="@|831.png|")
-    img.so.so-3(src="@|828.png|")
+    img.so.so-3.fenxiang(src="@|828.png|" o-tap="owo.script.share.showShare()")
+    img.so.so-3.xianhua(src="@|xianhua.png|" o-tap="xianhua")
     img.so.so-4(src="@|829.jpg|")
 </template>
+
 <script>
 module.exports = {
+  xianhua: function () {
+    this.$el.classList.add('two')
+  }
 }
 </script>
+
 <style lang="less">
 .so-0 {
   left: 0px;
@@ -27,6 +33,8 @@ module.exports = {
   left: 189px;
   top: 800px;
   z-index: -2;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 .so-3 {
   left: 256px;
@@ -37,5 +45,8 @@ module.exports = {
   left: 0px;
   top: 0px;
   z-index: -4;
+}
+.fenxiang {
+  display: none;
 }
 </style>

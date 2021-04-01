@@ -5,8 +5,9 @@
     img.so.so-10(src="@|106.png|")
     img.so.so-11(src="@|105.png|")
     img.so.so-12(src="@|104.png|")
-    img.so.so-13(src="@|103.png|")
+    img.so.so-13.yu-ani(src="@|103.png|")
     img.so.so-14(src="@|1341.jpg|")
+    img.so.zhuzi.zhuzi-ani(src="@|zhuzi.png|")
 </template>
 
 <script>
@@ -30,7 +31,7 @@ module.exports = {
 }
 .so-9 {
   left: 0px;
-  top: 0px;
+  bottom: 0px;
   z-index: -9;
 }
 .so-10 {
@@ -57,5 +58,39 @@ module.exports = {
   left: 0px;
   top: 0px;
   z-index: -14;
+}
+.zhuzi {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@keyframes zhuziAni{
+    0%{
+      transform: rotate(0deg) translateY(0px);
+    }
+    50%{
+      transform: rotate(2deg) translateY(-5px);
+    }
+    100%{
+      transform: rotate(0deg) translateY(0);
+    }
+}
+
+.zhuzi-ani {
+  animation: zhuziAni 3s infinite 0s linear;
+}
+@keyframes yuAni {
+    0%{
+      transform: rotate(0deg) translateX(60px) translateY(-100px);
+      opacity: 1;
+    }
+    100%{
+      transform: rotate(0deg) translateX(-30px) translateY(50px);
+      opacity: 0;
+    }
+}
+
+.yu-ani {
+  animation: yuAni 3s infinite 0s linear;
 }
 </style>

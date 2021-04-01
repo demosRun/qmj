@@ -3,12 +3,21 @@
   .so.so-0
     img.so.so-1(src="@|1347.png|")
     img.so.so-2(src="@|294.png|")
-    img.so.so-3(src="@|412.png|" go="page2//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
-    img.so.so-4(src="@|287.png|" go="page4//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
+    img.so.so-3.syp(src="@|412.png|" o-tap="next('one')")
+    img.so.so-3.fhsy(src="@|fhsy.png|" go="page2//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
+    img.so.so-4.next(src="@|jtas.png|" go="page4//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
+    img.so.so-4.switch(src="@|287.png|" o-tap="next('two')")
 </template>
 
 <script>
 module.exports = {
+  next: function (text) {
+    if (text == 'two') {
+      this.$el.classList.add('two')
+    } else {
+      this.$el.classList.remove('two')
+    }
+  }
 }
 </script>
 
@@ -18,7 +27,7 @@ module.exports = {
   top: 0px;
   width: 750px;
   height: 1508px;
-  z-index: 0;;
+  z-index: 0;
 }
 .so-1 {
   left: 310px;
@@ -40,4 +49,8 @@ module.exports = {
   top: 1254px;
   z-index: -4;
 }
+.next, .syp {
+  display: none;
+}
+
 </style>

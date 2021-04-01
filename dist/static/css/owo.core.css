@@ -54,17 +54,42 @@ li {
   list-style: none;
 }
 
+@-webkit-keyframes flicker {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 20%;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 20%;
+  }
+}
+
+[o-animation="flicker"] {
+  -webkit-animation: flicker 2s linear 0s infinite alternate;
+  animation: flicker 2s linear 0s infinite alternate;
+}
+
 .loading-box {
   width: 100%;
   height: 100%;
-  background-image: url('https://cunchu.site/ozzx/resource/lanse.jpg');
+  background-image: url('../resource/loading.jpg');
 }
 
 .loading-box .loading {
   position: absolute;
   left: 0;
   right: 0;
-  top: -16%;
+  top: -3%;
   bottom: 0;
   margin: auto;
 }
@@ -82,6 +107,7 @@ li {
   border-radius: 20px;
   padding: 10px;
   box-shadow: 2px 3px 9px #5d739c;
+  display: none;
 }
 
 .loading-box .num-bar {
@@ -103,12 +129,13 @@ li {
   font-size: 36px;
   width: 100%;
   text-align: center;
-  color: white;
+  color: #4a7079;
   font-weight: bold;
 }
 
 .loading-box .text {
-  bottom: -14%;
+  bottom: 14%;
+  color: #4a7079;
 }
 [o-animation="shrink"] {
   -webkit-animation: shrink 1s linear alternate infinite;
@@ -121,6 +148,32 @@ li {
 @keyframes shrink{
   0%{transform:scale(0.9);}
   100%{transform:scale(1);}
+}
+
+
+[o-animation="floatLeftRight"] {
+  -webkit-animation: floatLeftRight 3s linear infinite;
+  animation: floatLeftRight 3s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes floatLeftRight {
+  0% { transform: translateX(-5vw);}
+  50% {transform: translateX(5vw);}
+  100% {transform: translateX(-5vw);}
+}
+
+@-webkit-keyframes float {
+  0% { transform: translateX(-5vw);}
+  50% {transform: translateX(5vw);}
+  100% {transform: translateX(-5vw);}
+}
+
+@keyframes float {
+  0% { transform: translateX(-5vw);}
+  50% {transform: translateX(5vw);}
+  100% {transform: translateX(-5vw);}
 }
 
 .page-1 .so-0 {
@@ -171,6 +224,8 @@ li {
   left: 105px;
   top: 415px;
   z-index: -7;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 .page-1 .so-8 {
@@ -291,6 +346,11 @@ li {
   top: 1254px;
   z-index: -4;
 }
+
+.page3 .next,
+.page3 .syp {
+  display: none;
+}
 .page4 .so-0 {
   left: 0px;
   top: 0px;
@@ -358,7 +418,7 @@ li {
 
 .bg .so-9 {
   left: 0px;
-  top: 0px;
+  bottom: 0px;
   z-index: -9;
 }
 
@@ -390,6 +450,74 @@ li {
   left: 0px;
   top: 0px;
   z-index: -14;
+}
+
+.bg .zhuzi {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@-webkit-keyframes zhuziAni {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(2deg) translateY(-5px);
+  }
+
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+@keyframes zhuziAni {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(2deg) translateY(-5px);
+  }
+
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+.bg .zhuzi-ani {
+  -webkit-animation: zhuziAni 3s infinite 0s linear;
+          animation: zhuziAni 3s infinite 0s linear;
+}
+
+@-webkit-keyframes yuAni {
+  0% {
+    transform: rotate(0deg) translateX(60px) translateY(-100px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(-30px) translateY(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes yuAni {
+  0% {
+    transform: rotate(0deg) translateX(60px) translateY(-100px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(-30px) translateY(50px);
+    opacity: 0;
+  }
+}
+
+.bg .yu-ani {
+  -webkit-animation: yuAni 3s infinite 0s linear;
+          animation: yuAni 3s infinite 0s linear;
 }
 .page6 .so-0 {
   left: 0px;
@@ -453,6 +581,41 @@ li {
   top: 0px;
   z-index: -4;
 }
+
+.page7 .text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../resource/text-1.png');
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  transition: opacity 1s;
+}
+
+.page7 .text-2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../resource/moai.png');
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s;
+}
 .page8 .so-0 {
   left: 0px;
   top: 0px;
@@ -471,6 +634,9 @@ li {
   left: 189px;
   top: 800px;
   z-index: -2;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .page8 .so-3 {
@@ -483,6 +649,102 @@ li {
   left: 0px;
   top: 0px;
   z-index: -4;
+}
+
+.page8 .fenxiang {
+  display: none;
+}
+.music-menu {
+  position: absolute;
+  right: 10px;
+  top: 10%;
+  z-index: 9;
+  width: 40px;
+  height: 40px;
+}
+
+.music-menu .music-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.music-menu .active {
+  -webkit-animation: musicturn 12s linear infinite;
+          animation: musicturn 12s linear infinite;
+}
+
+@-webkit-keyframes musicturn {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes musicturn {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.share-page {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.share-page img {
+  position: absolute;
+  top: -6%;
+  right: 0;
+  width: 67%;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.share-page .text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 135px;
+  text-align: center;
+  font-size: 16px;
+  color: black;
 }
 /* 页面切换动画 */
 .o-page-scaleDown {
