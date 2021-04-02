@@ -5,13 +5,29 @@
     img.so.so-2(src="@|396.png|" go="page6//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
     img.so.so-3(src="@|235.png|")
     img.so.so-4(src="@|218.jpg|")
+    img.so.so-3.next-button(src="@|828.png|" o-tap="owo.script.share.showShare()")
     .text
     .text-2
+    //- 时间框
+    .text-3 00
+    plug(_name="module123" _text="15" _src="https://template.owo.ink/8823f9ed62bb78eb.owo")
 </template>
 <script>
 module.exports = {
   click: function () {
     this.$el.classList.add('two')
+    this.query('.next-button').style.display = 'block'
+    let num = 15
+    const clock = setInterval(() => {
+      num--
+      let temp = num
+      if (num < 10) temp = '0' + num
+      this.template.module123.changeText(temp)
+      if (num == 0) {
+        clearInterval(clock)
+        
+      }
+    }, 1000);
   }
 }
 </script>
@@ -69,5 +85,26 @@ module.exports = {
   pointer-events: none;
   opacity: 0;
   transition: opacity 1s;
+}
+.scoreboard, .text-3 {
+  width: 220px;
+  height: 100px;
+  position: absolute;
+  top: 300px;
+  left: 405px;
+  line-height: 88px;
+  font-size: 75px;
+  letter-spacing: 65px;
+  text-indent: 33px;
+  color: #437c83;
+}
+.text-3 {
+  left: 130px;
+}
+.next-button {
+  left: 256px;
+  top: 1254px;
+  z-index: -3;
+  display: none;
 }
 </style>

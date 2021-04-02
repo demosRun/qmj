@@ -159,6 +159,11 @@
 			"name": "share",
 			"src": "https://template.owo.ink/51ca7ab4c38de699.owo",
 			"type": "block"
+		},
+		{
+			"name": "iframe",
+			"src": "/src/page/iframe.owo",
+			"type": "block"
 		}
 	],
 	"mode": {

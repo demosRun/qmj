@@ -7,9 +7,6 @@
 <script>
 module.exports = {
   created: function () {
-    if(autoScaleInfo && autoScaleInfo.hideHeight) {
-      this.$el.getElementsByClassName('share-img')[0].style.top = -autoScaleInfo.hideHeight + 'px'
-    }
   },
   showShare: function () {
     this.$el.style.display = 'block'
@@ -42,7 +39,7 @@ img {
   position: absolute;
   top: -6%;
   right: 0;
-  width: 67%;
+  width: 83%;
   left: 0;
   bottom: 0;
   margin: auto;
@@ -51,9 +48,9 @@ img {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 135px;
+  bottom: 50px;
   text-align: center;
   font-size: 16px;
-  color: black;
+  color: white;
 }
 </style>

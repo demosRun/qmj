@@ -2,13 +2,16 @@
 .page4
   .so.so-0
     img.so.so-1(src="@|404.png|" go="page3//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
-    img.so.so-2(src="@|871.png|" go="page5//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
+    img.so.so-2(src="@|871.png|" o-tap="owo.script.iframe.show()")
     img.so.so-3(src="@|199.png|" go="page6//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
     img.so.so-4(src="@|1348.png|")
 </template>
 
 <script>
 module.exports = {
+  show: function () {
+    document.querySelector('.so-9').style.opacity = 1
+  }
 }
 </script>
 

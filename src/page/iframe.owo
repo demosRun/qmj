@@ -1,0 +1,39 @@
+<template lang="pug">
+.iframe
+  img.so.so-1(src="@|back.png|" o-tap="close")
+  iframe(src="http://military.people.com.cn/n1/2021/0402/c1011-32068512.html")
+</template>
+
+<script>
+  module.exports = {
+    close: function () {
+      this.$el.style.display = 'none'
+    },
+    show: function () {
+      this.$el.style.display = 'block'
+      this.query('iframe').src = "http://military.people.com.cn/n1/2021/0402/c1011-32068512.html"
+    }
+  }
+</script>
+
+<style lang="less">
+.iframe, iframe {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: white;
+  z-index: 10;
+}
+.iframe {
+  display: none;
+}
+.so-1 {
+  z-index: 99;
+  left: 2px;
+  top: 15px;
+  width: 31vw;
+}
+</style>

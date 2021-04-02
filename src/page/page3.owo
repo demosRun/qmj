@@ -1,22 +1,90 @@
 <template lang="pug">
 .page3
   .so.so-0
-    img.so.so-1(src="@|1347.png|")
     img.so.so-2(src="@|294.png|")
     img.so.so-3.syp(src="@|412.png|" o-tap="next('one')")
     img.so.so-3.fhsy(src="@|fhsy.png|" go="page2//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
     img.so.so-4.next(src="@|jtas.png|" go="page4//scaleDown/scaleUpDown/true/scaleDown/scaleUp")
     img.so.so-4.switch(src="@|287.png|" o-tap="next('two')")
+    .scrro-box
+      .scrro-bar.scrro-bar-1.clear
+        img(src="@|1-1.png|")
+        img(src="@|1-2.png|")
+        img.so.so-1(src="@|1347.png|" o-animation="flicker")
+      .scrro-bar.scrro-bar-2.clear
+        img(src="@|2-1.jpg|")
+        img(src="@|2-2.jpg|")
+        img.so.so-1(src="@|1347.png|" o-animation="flicker")
+      .scrro-bar.scrro-bar-3.clear
+        img(src="@|3-1.png|")
+        img(src="@|3-2.jpg|")
+        img.so.so-1(src="@|1347.png|" o-animation="flicker")
+      .scrro-bar.scrro-bar-4.clear
+        img(src="@|4-1.png|")
+        img(src="@|4-2.jpg|")
+        img.so.so-1(src="@|1347.png|" o-animation="flicker")
+      .scrro-bar.scrro-bar-5.clear
+        img(src="@|5-1.png|")
+        img(src="@|5-2.jpg|")
+        img.so.so-1(src="@|1347.png|" o-animation="flicker")
+      .scrro-bar.scrro-bar-6.clear
+        img(src="@|6-1.png|")
+        img(src="@|6-2.jpg|")
+        img.so.so-1(src="@|1347.png|" o-animation="flicker")
 </template>
 
 <script>
 module.exports = {
+  data: {
+    index: 0
+  },
+  show: function () {
+    document.querySelector('.so-9').style.opacity = 0
+  },
+  created: function () {
+    this.showBox(1)
+  },
   next: function (text) {
-    if (text == 'two') {
-      this.$el.classList.add('two')
+    
+    if (text == 'two') this.data.index ++
+    else this.data.index --
+    console.log(this.data.index)
+    if (this.data.index != 0) {
+      setTimeout(() => {
+        this.query('.syp').style.display = 'block'
+        this.query('.fhsy').style.display = 'none'
+      }, 100)
+      
     } else {
-      this.$el.classList.remove('two')
+      setTimeout(() => {
+        this.query('.syp').style.display = 'none'
+        this.query('.fhsy').style.display = 'block'
+      }, 100);
+      
     }
+    if (this.data.index >= 5) {
+      this.query('.switch').src = '@|jtas.png|'
+      if (text == 'two') {
+        this.$el.classList.add('two')
+      } else {
+        this.$el.classList.remove('two')
+      }
+      if (this.data.index > 5) {
+        owo.go('page4//scaleDown/scaleUpDown/true/scaleDown/scaleUp')
+      } else {
+        this.showBox(this.data.index + 1)
+      }
+    } else {
+      this.showBox(this.data.index + 1)
+    }
+  },
+  showBox: function (ind) {
+    this.queryAll('.scrro-bar').forEach(element => {
+      element.style.display = 'none'
+    })
+    setTimeout(() => {
+      this.query(`.scrro-bar-${ind}`).style.display = 'block'
+    }, 0);
   }
 }
 </script>
@@ -30,9 +98,11 @@ module.exports = {
   z-index: 0;
 }
 .so-1 {
-  left: 310px;
-  top: 1130px;
-  z-index: -1;
+  left: 277px;
+  bottom: 31px;
+  z-index: 10;
+  user-select: none;
+  pointer-events: none;
 }
 .so-2 {
   left: 0px;
@@ -52,5 +122,32 @@ module.exports = {
 .next, .syp {
   display: none;
 }
-
+.scrro-box {
+  height: 931px;
+  position: absolute;
+  z-index: 9;
+  width: 698px;
+  top: 270px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: auto;
+}
+.scrro-bar {
+  display: none;
+  width: 1396px;
+  display: block;
+  height: 100%;
+  overflow-y: hidden;
+  img {
+    float:  left;
+    width: 698px;
+    overflow: hidden;
+    height: 100%;
+  }
+  .so-1 {
+    width: auto;
+    height: auto;
+  }
+}
 </style>

@@ -13,8 +13,11 @@
 
 <script>
   module.exports = {
+    show: function () {
+      document.querySelector('.so-9').style.opacity = 1
+    },
     created: function () {
-
+      owo.animate('fadeIn', this.query('.so-2'))
     }
   }
 </script>

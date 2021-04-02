@@ -56,10 +56,10 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
   position: absolute;
 }
 
-.two .next, .two .syp, .two .fenxiang {
+.two .syp, .two .fenxiang {
   display: block;
 }
-.two .switch, .two .fhsy, .two .xianhua {
+.two .fhsy, .two .xianhua, .two.page7 .so-1 {
   display: none;
 }
 
